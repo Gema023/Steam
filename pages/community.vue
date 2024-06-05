@@ -1,0 +1,123 @@
+<template>
+    <div><NavBar /></div>
+    <div><Carousel /></div>
+
+  <h1>Bienvenid@ a la Comunidad de Steam, @nombre del usuario</h1>
+  <div><Footer /></div>
+
+  </template>
+  
+  <script>
+  import Footer from '~/components/Footer.vue'
+
+  export default {
+    data() {
+      return {
+        searchQuery: '',
+        selectedLanguage: 'es',
+        showLoginModal: false,
+        username: '',
+        password: ''
+      }
+    },
+    methods: {
+      search() {
+        console.log('Búsqueda realizada:', this.searchQuery)
+      },
+      login() {
+        console.log('Inicio de sesión:', this.username, this.password)
+        this.showLoginModal = false
+      }
+    },
+    components: {
+    Footer
+  }
+  }
+
+  </script>
+  
+  <style postcss>
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2B2B2B;
+    color: #DEDEDE;
+    padding: 22px;
+    gap: 4px;
+  }
+
+  h1 {
+  font-family: 'Cairo', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 10px;
+}
+  
+  .nav-links ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-links a {
+    color: #DEDEDE;
+    text-decoration: none;
+  }
+  
+  .search-bar input {
+    padding: 5px;
+  }
+  
+  .search-bar button {
+    padding: 5px 10px;
+  }
+  
+  .language-selector select {
+    padding: 5px;
+  }
+  
+  .login-btn button {
+    padding: 5px 10px;
+  }
+  
+  /* Estilos para el modal */
+  .modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #DEDEDE;
+    margin: 3% auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 800px;
+    height: 600px;
+  }
+  
+  .close {
+    color: #2B2B2B;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  </style>
