@@ -3,6 +3,9 @@
     <div><Carousel /></div>
 
   <h1>Bienvenid@ a la Tienda de Puntos de Steam, @nombre del usuario</h1>
+  <p>En este apartado podrás comprar artículos para personalizar tu perfil, tus chats, etc.</p>
+
+  <div><NavBar_points /></div>
   <div><Footer /></div>
 
   </template>

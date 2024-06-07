@@ -3,6 +3,7 @@
     <div><Carousel /></div>
 
   <h1>Bienvenid@ a la Comunidad de Steam, @nombre del usuario</h1>
+  <p>En este apartado podrás encontrar todo tipo de foros, descubrir Workshops, vídeos compartidos por otros jugadores, y mucho más.</p>
   <div><Footer /></div>
 
   </template>
@@ -52,6 +53,10 @@
   font-weight: bold;
   font-size: 30px;
   margin: 10px;
+}
+
+p{
+  padding: 10px;
 }
   
   .nav-links ul {
